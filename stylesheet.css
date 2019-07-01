@@ -1,0 +1,155 @@
+/**
+Menue Bar Formatting
+ */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+li b {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+li b:hover {
+    background-color: #111;
+}
+
+
+
+/**
+body Formatting
+ */
+body {background-color: grey;}
+h1   {color: crimson;}
+p    {color: blue;}
+button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/**
+Buttion Formatting
+ */
+button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+}
+
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+.vertical-menu a.title {
+    background-color: #333;
+    color: white;
+}
+.bottom-menu {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.bottom-menu a.title {
+    background-color: #333;
+    color: white;
+}
+
+
+
+.grid-container {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    position: absolute;
+    /* TODO something is making the screen to big: fix the below janky fix. */
+    height: calc(100vh);
+    width: 100vw;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto 20px;
+    background-color: #eee;
+}
+.grid-top-menu {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.grid-vertical-menu {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    grid-column: 1;
+    grid-row: 2 / 4;
+    overflow-y: scroll;
+    top: 0;
+    height: 100%;
+
+}
+.grid-workspace {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.grid-bottom-menu {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.workspace {
+    max-height: 100px;
+    max-width:100px;
+    overflow: scroll;
+}
