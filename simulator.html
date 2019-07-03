@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLCanvas</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body style = "margin:0">
+
+<div class="grid-container">
+    <div class="grid-top-menu">
+        <ul>
+            <!--TODO: This image has a border due to CSS. Removing it from the CSS group makes it un-clickabe-->
+            <li><a href="home.html">
+                <img src="images/testLogoCropped.png" style="width:198px;height:40px;">
+            </a></li>
+            <li><a href="simulator.html">Simulator</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+    <div class="grid-vertical-menu">
+        <div class="vertical-menu">
+            <a class="title">Inputs</a>
+            <img id="imput1_image" src="images/200x50+input1.png" draggable="true" ondragstart="input1()" style="cursor:pointer">
+            <img id="imput2_image" src="images/200x50+input2.png" draggable="true" ondragstart="input2()" style="cursor:pointer">
+            <a class="title">Outputs</a>
+            <img id="output1_image" src="images/200x50+output1.png" draggable="true" ondragstart="output1()" style="cursor:pointer">
+            <img id="output2_image" src="images/200x50+output2.png" draggable="true" ondragstart="output2()" style="cursor:pointer">
+            <a class="title">Gates</a>
+            <img id="gate1_image" src="images/200x50+gate1.png" draggable="true" ondragstart="gate1()" style="cursor:pointer">
+            <img id="gate2_image" src="images/200x50+gate2.png" draggable="true" ondragstart="gate2()" style="cursor:pointer">
+            <a class="title">PlaceHolder</a>
+            <img id="placeholder1_image" src="images/placeholder.png" draggable="true" ondragstart="placeholder()" style="cursor:pointer">
+            <img id="placeholder2_image" src="images/placeholder.png" draggable="true" ondragstart="placeholder()" style="cursor:pointer">
+            <a class="title">PlaceHolder</a>
+            <img id="placeholder3_image" src="images/placeholder.png" draggable="true" ondragstart="placeholder()" style="cursor:pointer">
+            <img id="placeholder4_image" src="images/placeholder.png" draggable="true" ondragstart="placeholder()" style="cursor:pointer">
+        </div>
+    </div>
+    <div class="grid-workspace" style="overflow:scroll">
+        <canvas id="c" width="2000" height="1500px"></canvas>
+    </div>
+    <div class="grid-bottom-menu">
+        <div class="bottom-menu">
+            <ul>
+                <li><b onclick="">run</b></li>
+                <li><b onclick="">save</b></li>
+                <li><b onclick="button3()">button 3</b></li>
+                <li><b onclick="button4()">button4</b></li>
+            </ul>
+        </div>
+    </div>
+    <script src="scripts/libraries/fabric.min.js" type="text/javascript"></script>
+    <script src="scripts/canvas.js"></script>
+</div>
+</body>
+</html>
